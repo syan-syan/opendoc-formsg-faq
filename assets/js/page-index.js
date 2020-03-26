@@ -1,0 +1,81 @@
+(function() {
+    // Data Blob
+    // =============================================================================
+    // The main "blob" of site data constructed by liquid
+    // We cherry pick to minimize size
+    // Also because jsonify doesn't work quite right and collapses the page objects
+    // into just strings when we jsonify the whole site
+    var pages = [
+        
+        {
+                name: "AdvancedGuide.md",
+                title: "Advanced Guide",
+                url: "/opendoc-formsg-faq/AdvancedGuide.html",
+                escapedPath: "AdvancedGuide.md",
+                dir: "/",
+                tocId: "toc_/",
+                documentInfo: ["FormSG - Guide","",["Updates.md","ReadThisFirst.md","AdvancedGuide.md","AskAPro.md"]]
+            },
+            
+        {
+                name: "AskAPro.md",
+                title: "Ask a Pro",
+                url: "/opendoc-formsg-faq/AskAPro.html",
+                escapedPath: "AskAPro.md",
+                dir: "/",
+                tocId: "toc_/",
+                documentInfo: ["FormSG - Guide","",["Updates.md","ReadThisFirst.md","AdvancedGuide.md","AskAPro.md"]]
+            },
+            
+        {
+                name: "ReadThisFirst.md",
+                title: "READ THIS FIRST",
+                url: "/opendoc-formsg-faq/ReadThisFirst.html",
+                escapedPath: "ReadThisFirst.md",
+                dir: "/",
+                tocId: "toc_/",
+                documentInfo: ["FormSG - Guide","",["Updates.md","ReadThisFirst.md","AdvancedGuide.md","AskAPro.md"]]
+            },
+            
+        {
+                name: "Updates.md",
+                title: "Updates",
+                url: "/opendoc-formsg-faq/Updates.html",
+                escapedPath: "Updates.md",
+                dir: "/",
+                tocId: "toc_/",
+                documentInfo: ["FormSG - Guide","",["Updates.md","ReadThisFirst.md","AdvancedGuide.md","AskAPro.md"]]
+            },
+            
+        {
+                name: "index.md",
+                title: "FormSG - User Guide",
+                url: "/opendoc-formsg-faq/",
+                escapedPath: "index.md",
+                dir: "/",
+                tocId: "toc_/",
+                documentInfo: ["FormSG - Guide","",["Updates.md","ReadThisFirst.md","AdvancedGuide.md","AskAPro.md"]]
+            },
+            
+        
+    ]
+
+    var pageIndex = {}
+    var documentList = {}
+
+    pages.forEach(function(page) {
+        pageIndex[page.url] = page
+        var documentTitle = page.documentInfo ? page.documentInfo[0] : 'root'
+        if (documentList[documentTitle]) {
+            documentList[documentTitle].push(page)
+        } else {
+            documentList[documentTitle] = [page]
+        }
+    })
+
+    // Expose as global var
+    root = typeof exports !== 'undefined' && exports !== null ? exports : this
+
+    root.pageIndex = pageIndex;
+    root.documentList = documentList;
+})()

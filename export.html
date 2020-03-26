@@ -1,0 +1,952 @@
+<!-- layout for print export.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+  </head>
+
+  <body class="print-content">
+    <section class="description">
+      <img class="description-logo" src="./assets/logo-horizontal-color.svg">
+      <div class="description-title">FormSG - Guide</div>
+    </section>
+
+    <div class="site-main" aria-label="Content" >
+      
+<h1 id="advanced-guide">Advanced Guide</h1>
+
+<p>This advanced guide includes tips and tricks, and also solutions to common issues you may face when using FormSG. This section is updated regularly, so feel free to check back once in a while.</p>
+
+<h2 id="is-formsg-accessible-on-the-intranet">Is FormSG accessible on the Intranet?</h2>
+
+<p>Yes! Since start of 2020, FormSG has been accessible on WOG Intranet. If you still cannot access https://form.gov.sg on the Intranet, join our Workplace@Facebook group and ask for help. Note certain features are not available on WOG Intranet, such as SingPass/CorpPass/MyInfo and Captcha. If your form is intended for internal use, you can disable Captcha.</p>
+
+<h2 id="i-did-not-receive-my-otp-where-is-it">I did not receive my OTP. Where is it?</h2>
+
+<p>The OTP is sent immediately, but might take a while to arrive in your government email due to the potentially multiple firewalls the email has to go through. OTPs expire in 15 minutes, after which you have to resend another one. After logging in, you will remain logged in for 24 hours. This means you need not have both Intranet and Internet devices at all times; you can log in to your Internet device before you leave your office, and for 24 hours be able to create forms from one Internet device.</p>
+
+<h2 id="where-do-i-access-the-data-collation-tool-i-cant-find-it">Where do I access the Data Collation Tool? I can’t find it.</h2>
+
+<p>Since we moved to the Intranet start of 2020, Data Collation Tool has shifted from the old link of https://form.app.gov.sg to the new link of https://collate.form.gov.sg.</p>
+
+<h2 id="where-is-the-signature-field">Where is the signature field?</h2>
+
+<p>There are a few variants of electronic signatures available on FormSG, all of which, according to the Electronic Transactions Act, are not legally weaker than a wet ink signature. Agencies such as IRAS and MOM have used the following for electronic signatures: a) an NRIC field, b) an attachment of a wet ink signature and c) SingPass Login.</p>
+
+<h2 id="how-do-i-route-responses-to-different-emails-based-on-form-option-selected">How do I route responses to different emails based on form option selected?</h2>
+
+<p>This might apply for an enquiry form. If user chooses “Complaint” response should route to Complaints Department, but if user chooses “IT” response should route to IT Department. There’s no such feature on FormSG, but you can set mail forwarding rules on your email. For example, one such rule can detect “Complaint” in the form response email, and forward this to the Complaints Department automatically.</p>
+
+<p>To set such mail forwarding rules, you have to Create Rule, then select Advanced Options. Next, select the condition as “with specific words in the body”:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-mailforwarding-guide-1.jpg" alt="FormSG FAQ Specify Condition" title="FormSG FAQ Specify Condition" /></p>
+
+<p>Click on the underlined “specific words”, and specify “IT department”. Next, select the action as “forward it to people or public group”:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-mailforwarding-guide-2.jpg" alt="FormSG FAQ Forward Mail" title="FormSG FAQ Forward Mail" /></p>
+
+<p>Click on the underlined “people or public group” and specify the IT department’s email.</p>
+
+<h2 id="my-form-is-really-long-why-cant-users-save-draft">My form is really long. Why can’t users save draft?</h2>
+
+<p>We took out Save Draft because there is no good place to save such data - our servers do not store data, and saving data on the local computer might leak this out to unintended recipients if form is filled from a library computer. Furthermore, it’s more important to advise the user how long it takes to fill in the form, so they have sufficient time to submit in one sitting, which is a better user experience than saving draft and coming back repeatedly. In the future after launch of Storage mode, we might consider re-enabling Save Draft function.</p>
+
+<h2 id="how-do-i-increase-attachment-size-limit-and-what-if-there-are-many-attachments-for-my-form">How do I increase attachment size limit? And what if there are many attachments for my form?</h2>
+
+<p>The current size limit is 7 MB for the entire form. We auto-compress images to 1024x768 resolution, which is typically less than 1 MB. This is a hard limit because the email service we use has a fixed 10 MB outgoing size, and we buffer 3 MB for email fields and metadata. Because the smallest unit you can attach per attachment field is 1 MB, you can have a max of 7 attachments on your form. If your user has to submit more than 7 documents, you may create just one attachment field of 7 MB, and advise your user to zip documents up and submit as one attachment. In the future after launch of Storage mode, we are considering raising this size limit to 20 MB.</p>
+
+<h2 id="i-am-leaving-the-organisation-or-switching-over-to-a-new-email-how-do-i-transfer-ownership-of-my-forms">I am leaving the organisation or switching over to a new email. How do I transfer ownership of my forms?</h2>
+
+<p>Note that you might not need to transfer ownership of your form. You may simply add your colleague as a collaborator. Collaborators have the same rights as form creators, except they cannot delete the form.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-collaborator.png" alt="FormSG FAQ Add Collaborators" title="FormSG FAQ Add Collaborators" /></p>
+
+<p>If you have already lost access to your old email and can no longer edit your form, you may file a <a href="https://go.gov.sg/formsg-support">Support Form</a> request to transfer ownership to another email.</p>
+
+<h2 id="my-forms-are-particularly-sensitive-and-i-do-not-want-other-public-officers-to-see-them-on-the-examples-tab">My forms are particularly sensitive and I do not want other public officers to see them on the Examples tab.</h2>
+
+<p>Note that only forms that are active, and have at least 10 responses will be searchable on the Examples tab. And that the Examples tab is only viewable by authenticated public officers, not the general public. Furthermore, only your form fields are viewable, not your form data.</p>
+
+<p>But if there is still a need to unlist your form from the Examples tab because the form fields alone are already sensitive to be viewed by fellow public officers, then you may submit our <a href="https://go.gov.sg/formsg-support">Support Form</a>, and attach an email approval from your MIC (DD/Dir) stating justifications for unlisting specific form links from the Examples tab.</p>
+
+<h2 id="can-my-forms-support-multiple-languages">Can my forms support multiple languages?</h2>
+
+<p>Yes it can. Form title has to be in English, but instructions and fields can be in any language. For example, you can specify form fields in English, and provide translations in field descriptions. Your users can also submit your form in any language they want - they just have to switch to the respective keyboard on their device.</p>
+
+<h2 id="is-there-an-address-field-how-can-i-auto-populate-one">Is there an address field? How can I auto-populate one?</h2>
+
+<p>You may create a Postal code field with Short Text that validates 6 characters, together with a few more fields for block and unit numbers. Do not use a Number field for Postal code as Numbers cannot start with zero. If verified addresses are needed, you may enable SingPass on your form, and drag in a Registered Address MyInfo field.</p>
+
+<h2 id="how-do-i-restrict-access-to-my-form-to-selected-users-to-submit">How do I restrict access to my form to selected users to submit?</h2>
+
+<p>The unguessable form link acts as a password. You can circulate the form link to only users that you intend to gather responses from. As long as you don’t add the form link to public channels such as on your agency’s Internet website, the form link will not be indexed by search engines. If the form link ends up widely circulated with non-authorised users submitting the form, you may then filter off such non-authorised submissions.</p>
+
+<h2 id="when-should-i-use-a-radio-button-vs-a-dropdown-field">When should I use a radio button vs a dropdown field?</h2>
+
+<p>For 6 or fewer choices, it is advised to use a radio button, as there are only a few options to display:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-radio.png" alt="FormSG FAQ Radio Button" title="FormSG FAQ Radio Button" /></p>
+
+<p>For &gt;6 choices, you should use a dropdown field:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-dropdown.png" alt="FormSG FAQ Dropdown" title="FormSG FAQ Dropdown" /></p>
+
+<h2 id="excel-responses-from-table-style-questions-are-clumped-into-one-line-how-do-i-separate-them">Excel responses from table style questions are clumped into one line, how do I separate them?</h2>
+
+<ol>
+  <li>Open the excel sheet generated from our Data Collation Tool</li>
+  <li>Select the entire column of the responses</li>
+  <li>Go to the Data tab and choose Text to Columns &gt; Delimit by comma (,).</li>
+</ol>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-excel.png" alt="FormSG FAQ Excel Split Response" title="FormSG FAQ Excel Split Response" /><br />
+Don’t worry if responses contain commas because Excel does not split commas accompanied by spaces. Commas between columns have no space, which Excel will split by, unlike commas within sentences. An example response to a table style question asking for name, age, hobbies is: “Mr Tan,55,Soccer, Tennis, Taichi”. Excel will split this correctly into “Mr Tan”, “55”, and “Soccer, Tennis, Taichi” because it ignores the commas in hobbies that have spaces after them.</p>
+
+<h2 id="how-can-i-split-the-form-into-multiple-pages">How can I split the form into multiple pages?</h2>
+
+<p>We don’t support multiple pages, because &gt;70% of our users fill in forms from their phones, and are used to navigate through content by scrolling not tabbing through pages, such as when they scroll through their social media feeds. Hence we built the Header field to separate your form into sections that your user can scroll through.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-section.png" alt="FormSG FAQ Create Section" title="FormSG FAQ Create Section" /></p>
+
+<h2 id="how-do-i-know-if-the-logic-for-the-form-is-correct">How do I know if the logic for the form is correct?</h2>
+
+<p>When you implement a new logic, you should test it yourself via the preview page. Note that the onus is on you to verify the correct logic for your form.</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-logic.png" alt="FormSG FAQ Logic" title="FormSG FAQ Logic" /></p>
+
+<h2 id="what-is-formsgs-infrastructure-like-how-is-the-security-of-the-system">What is FormSG’s infrastructure like? How is the security of the system?</h2>
+
+<p>We have our NodeJS web servers hosted on AWS Singapore zone. Our NoSQL database that stores only form fields and not form data is managed by Mongo Atlas, and also hosted on AWS Singapore zone. We use AWS SES to send out mails, which are not open mail relays, have valid SPF and DKIM records, and encrypts form data before sending them over to government SGMail. Our web servers are protected with Cloudflare SSL, their Anti-DDoS protection and Web Application Firewall. We use Pingdom for website performance and availability monitoring, and have AWS CloudWatch alarms, together with CloudTrail that monitors activity and GuardDuty for threat intelligence monitoring. Our Data Collation Tool is built with vanilla Javascript and is static site on S3. We have undergone rigorous penetration testing, vulnerability assessment and infrastructure review by both world renowned security testers and CSG. We have also written a &gt;74 page NIST security review documenting our security best practices.</p>
+
+<h2 id="does-my-data-go-to-your-server-when-i-use-the-data-collation-tool">Does my data go to your server when I use the Data Collation Tool?</h2>
+
+<p>No, your data is not seen by our server. Aggregation of your email responses happens offline on your browser.</p>
+
+<h2 id="email-reliability">Email reliability</h2>
+
+<h2 id="will-my-emails-be-blocked">Will my emails be blocked?</h2>
+
+<p>If emails are non-malicious, they typically will not be blocked. There are two junctures where they might be blocked, but the form submitter will know about it and will be able to retry:</p>
+
+<ul>
+  <li>
+    <p>When a user clicks Submit on his form, the response first goes to our server. Before reaching our server, we have a web application firewall that detects for malicious content and might block the submission. If blocked, a user will see a “Please try again later” message on the form.</p>
+  </li>
+  <li>
+    <p>If the form passes the web application firewall, it goes to our server, and we email it to your government email (SGMail) without storing it on our servers. If the government email does not exist then your response will bounce and the user will see a “Please try again later” message on the form.</p>
+  </li>
+</ul>
+
+<p>From here on out, if the email is blocked, your user will not be aware. But there is still a way for you as the form creator to retrieve the blocked responses:</p>
+
+<ul>
+  <li>If the government email exists, it proceeds to SGMail servers. Before it enters SGMail, it will arrive at SGMail’s firewall. This firewall will block out emails if there are attachments with non-whitelisted file extensions, for e.g. “.abc” or “.mov”. We are not aware of the full list of file extensions that SGMail whitelists, but most of the file extensions that are whitelisted can be viewed here on <a href="https://go.gov.sg/email-cwl">our spreadsheet</a>. If your email gets blocked due to non-whitelisted attachment file extensions, you will receive a mail hygiene notification. You may contact SPEAR (spear@tech.gov.sg) within 1 month from receiving the mail hygiene notification to retrieve the dropped mail.</li>
+</ul>
+
+<h2 id="how-do-i-recover-my-mail-when-i-receive-a-mail-hygiene-notification">How do I recover my mail when I receive a mail hygiene notification?</h2>
+
+<p>You may recover your blocked email within 1 month if you email SPEAR (spear@tech.gov.sg) and attach the mail hygiene notification.</p>
+
+<h2 id="what-is-storage-mode">What is Storage mode?</h2>
+
+<p>FormSG does not store your responses in the clear. In Storage mode, form responses are encrypted, before being sent to our server for storage. Here’s how it works:</p>
+
+<p>1) You create a form using Storage mode, and is prompted to download a secret key which you have to keep safe:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-storage-secretkey.png" alt="FormSG FAQ Storage Create Form" title="FormSG FAQ Storage Create Form" /></p>
+
+<p>2) When user submits your form, responses gets encrypted on user’s browser before being sent to our server for storage:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-storage-encrypted.png" alt="FormSG FAQ Storage Encrypted" title="FormSG FAQ Storage Encrypted" /></p>
+
+<p>3) To retrieve responses, visit the Data tab, and enter your secret key in order to download and unlock encrypted responses:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-storage-responses.png" alt="FormSG FAQ Storage View Response" title="FormSG FAQ Storage View Response" /></p>
+
+<p>4) You may then view your responses one-by-one by clicking each row, or export all responses to an Excel by clicking on Export.</p>
+
+<h2 id="what-are-the-benefits-of-storage-mode-over-email-mode">What are the benefits of Storage mode over Email mode?</h2>
+
+<p>The key benefit here is convenience. You no longer have to manage emails, and no longer have to manually aggregate emails into Excel using the Data Collation Tool. If your form has high volume such as tens of thousands of responses or more, it can be quite painful to manage those responses in your mailbox.</p>
+
+<h2 id="when-is-storage-mode-coming-out">When is Storage mode coming out?</h2>
+
+<p>Storage mode is expected to be launched to all users by end Apr 2020.</p>
+
+<h2 id="this-secret-key-sounds-important-what-if-i-lose-it">This secret key sounds important. What if I lose it?</h2>
+
+<p>Note that your form’s secret key has to be kept safely by you. Our server will not be able to recover your secret key if you lose it. This is an important security benefit, because that means if our server were to be compromised, your responses will not be leaked as the attacker will not have your secret key to unlock your encrypted responses.</p>
+
+<p>If you really do lose your secret key, you will lose past responses. Unfortunately, there is no way for us to retrieve the secret key for you. It is advised you promptly duplicate the form, and publish the new form with a new secret key to continue gathering responses.</p>
+
+<h2 id="how-do-i-make-sure-i-do-not-lose-my-secret-key">How do I make sure I do not lose my secret key?</h2>
+
+<p>It is recommended you share your secret key(s) with colleagues just in case. If you have multiple secret keys you can store them in an Excel with form links and associated secret keys, and keep this Excel on your government laptop. Consider storing secret keys in a third-party password manager tool if your agency has one. Most importantly, regularly log in to unlock form responses to make sure you still have the secret key.</p>
+
+<h2 id="what-if-i-want-to-purge-encrypted-responses-stored-on-the-formsg-server">What if I want to purge encrypted responses stored on the FormSG server?</h2>
+
+<p>To purge encrypted responses from our server, all you have to do is discard your secret key. Without the secret key, encrypted responses on our server are as good as gibberish.</p>
+
+<h2 id="what-if-my-secret-key-has-been-accidentally-circulated">What if my secret key has been accidentally circulated?</h2>
+
+<p>Backup your data first, by downloading form responses. Then create a new form with a new secret key and continue gathering responses from this new form. Finally, email us to delete encrypted responses from the old form with the leaked secret key.</p>
+
+<h2 id="how-do-i-suggest-changes-to-this-user-guide">How do I suggest changes to this user guide?</h2>
+
+<p>Our user guide is hosted by <a href="https://opendoc.sg">OpenDoc</a> and is written in <a href="https://www.markdownguide.org/">Markdown</a>, which is a laymen-friendly language. The code for our user guide is open-sourced, and you may visit our <a href="https://github.com/opendocsg/opendoc-formsg-faq">Github repository</a>, and send us a <a href="https://help.github.com/en/articles/creating-a-pull-request">Pull Request</a> if you have corrections or suggestions to the guide.</p>
+
+<h1 id="ask-a-pro">Ask a Pro</h1>
+
+<p>Below is a list of Pros you may consult from your respective agencies. These Pros are power users who have more than 10 forms or more than 1,000 responses under their belts. Many of them have thought of smart workarounds in the absence of features. They will be able to guide you to digitise your form, so feel free to reach out to them.</p>
+
+<p>This list is expected to grow over time. If there is no one from your agency in this list, why not be the first? As Agency Pro, you have the following perks:</p>
+<ul>
+  <li>You will be part of a group of subject matter experts to help peers in your agency</li>
+  <li>You will get access to juicy beta features before all other users</li>
+  <li>Your feature requests are prioritised, because it’s likely you have thought of workarounds that still did not work</li>
+</ul>
+
+<p><strong>A’STAR</strong><br />
+berny-heng@acrc.a-star.edu.sg</p>
+
+<p><strong>BCA</strong><br />
+brindha_natarajan@bca.gov.sg</p>
+
+<p><strong>CEA</strong><br />
+lay_poh_leng@cea.gov.sg</p>
+
+<p><strong>CS College</strong><br />
+charmaine_lim@cscollege.gov.sg<br />
+tan_hwee_eng@cscollege.gov.sg<br />
+phua_chui_ying@cscollege.gov.sg</p>
+
+<p><strong>Customs</strong><br />
+lau_guanyi@customs.gov.sg</p>
+
+<p><strong>Elections Department</strong><br />
+gerry_gewi@eld.gov.sg</p>
+
+<p><strong>Enterprise.sg</strong><br />
+clement_chua@enterprisesg.gov.sg</p>
+
+<p><strong>HPB</strong><br />
+eugene_aw@hpb.gov.sg<br />
+justin_chua@hpb.gov.sg<br />
+karthikayen_jayasundar@hpb.gov.sg</p>
+
+<p><strong>HSA</strong><br />
+katerina_tan@hsa.gov.sg</p>
+
+<p><strong>IRAS</strong><br />
+dion_eh@iras.gov.sg<br />
+ng_siling@iras.gov.sg</p>
+
+<p><strong>ISEAS</strong><br />
+swee_yew_pin@iseas.edu.sg</p>
+
+<p><strong>LTA</strong><br />
+jonn_tan@lta.gov.sg</p>
+
+<p><strong>MFA</strong>  <br />
+ong_wei_jie@mfa.gov.sg<br />
+seri_nur_haziqah_nor_azamm@mfa.gov.sg<br />
+teo_kah_beng@mfa.gov.sg</p>
+
+<p><strong>MHA</strong><br />
+angela_lee@mha.gov.sg</p>
+
+<p><strong>MINDEF</strong><br />
+cyonghon@defence.gov.sg</p>
+
+<p><strong>MND</strong><br />
+lin_peixin@mnd.gov.sg</p>
+
+<p><strong>MOE</strong><br />
+aaron_ang@moe.gov.sg<br />
+chen_yingjie_jason@moe.edu.sg<br />
+dennis_koh@moe.gov.sg <br />
+hamshala_ariaratnam@moe.gov.sg <br />
+jesslyn_ng@moe.gov.sg<br />
+neo_aik_seng@moe.gov.sg<br />
+nur_zuhailah_hanafi@moe.gov.sg  <br />
+ong_liting@moe.gov.sg<br />
+ong_yu_ling@moe.gov.sg <br />
+pereira_joscelyn_sebastian@moe.gov.sg<br />
+shahreen_aman@moe.gov.sg<br />
+siti_rabiah_mohamad_yazid@moe.edu.sg<br />
+tan_soo_gek@moe.gov.sg<br />
+tan_ying_yang@moe.edu.sg  <br />
+tiffany_lim@moe.gov.sg</p>
+
+<p><strong>MOE Schools</strong><br />
+chew_chee_yong@schools.gov.sg<br />
+fauziah_othman@schools.gov.sg<br />
+germain_kang_yin_ga@schools.gov.sg<br />
+mohammed_azhar_mohd_shariff@schools.gov.sg<br />
+kwek_soon_cheong@schools.gov.sg<br />
+rasis_abdul_rahim@schools.gov.sg<br />
+chang_jin_peng@schools.gov.sg</p>
+
+<p><strong>MOH</strong><br />
+lynette_tan@moh.gov.sg</p>
+
+<p><strong>MOM</strong><br />
+adrian_wong@mom.gov.sg<br />
+christen_lim@mom.gov.sg<br />
+joann_lim@mom.gov.sg</p>
+
+<p><strong>MPA</strong><br />
+cherie_lim@mpa.gov.sg</p>
+
+<p><strong>MSF</strong><br />
+du_yanchao@msf.gov.sg</p>
+
+<p><strong>Ngee Ann Polytechnic</strong><br />
+cheryl_lee@np.edu.sg<br />
+cleo_chiang@np.edu.sg</p>
+
+<p><strong>Nanyang Polytechnic</strong><br />
+andy_chia@nyp.edu.sg<br />
+rebekah_goh@nyp.edu.sg<br />
+viridis_liew@nyp.edu.sg<br />
+tay_mia_eng@nyp.edu.sg    <br />
+tay_li_leng@nyp.edu.sg</p>
+
+<p><strong>People’s Association</strong><br />
+alvin_goh@pa.gov.sg<br />
+chua_gek_fong@pa.gov.sg<br />
+jenna_goh@pa.gov.sg</p>
+
+<p><strong>PUB</strong><br />
+sherilyn_lee_from.pubtemp@pub.gov.sg</p>
+
+<p><strong>Republic Polytechnic</strong><br />
+tan_lee_kiat@rp.edu.sg <br />
+toh_yuet_wei@rp.edu.sg</p>
+
+<p><strong>SCDF</strong><br />
+lee_jun_qi@scdf.gov.sg<br />
+md_faizal_sri_jamal@scdf.gov.sg<br />
+ridzaidean_abu_bakar@scdf.gov.sg</p>
+
+<p><strong>Science Centre</strong><br />
+albert_sim@science.edu.sg<br />
+astra_yap@science.edu.sg<br />
+azenith_santiago@science.edu.sg<br />
+chowdary_subhasree_kosaraju@science.edu.sg<br />
+lim_teck_kim@science.edu.sg<br />
+marcus_fa@science.edu.sg<br />
+siti_zubaidah_abdul_rashid@science.edu.sg<br />
+susan_lim@science.edu.sg</p>
+
+<p><strong>SEAB</strong><br />
+tong_ying-ping@seab.gov.sg</p>
+
+<p><strong>Silver Generation Office</strong><br />
+joshua_chua@sgo.gov.sg</p>
+
+<p><strong>Singapore Prison Services</strong><br />
+ang_wai_how@pris.gov.sg</p>
+
+<p><strong>SPF</strong><br />
+muhammad_zahari@spf.gov.sg<br />
+tan_hong_han@spf.gov.sg<br />
+xie_zhirong@spf.gov.sg</p>
+
+<p><strong>Sport.sg</strong>  <br />
+alan_chen@sport.gov.sg<br />
+danielle_han@sport.gov.sg <br />
+lua_lee_hui@sport.gov.sg<br />
+melvyn_quek@sport.gov.sg</p>
+
+<p><strong>State Courts</strong><br />
+tay_kai_boon@statecourts.gov.sg</p>
+
+<p><strong>Temasek Polytechnic</strong><br />
+asklib@tp.edu.sg<br />
+scott@tp.edu.sg</p>
+
+<p><strong>Vital Shared Services</strong><br />
+lim_yi_jun@vital.gov.sg<br />
+rodney_lim@vital.gov.sg</p>
+
+<h1 id="read-this-first">READ THIS FIRST</h1>
+
+<p>This is a 5 minute read that helps you understand most of the in-and-outs of FormSG.</p>
+
+<h2 id="what-is-formsg">What is FormSG?</h2>
+
+<p>FormSG is a self-service form builder for government to create online forms that capture classified data, with the goal of replacing paper forms. Since it began in September 2017, it has replaced tens of thousands of paper forms and are used by over 90 agencies such as MOM, MOE, PA,  SportSG and TTSH. More than 25,000 officers are already on it. It has advanced features and can be used for not just simple surveys but also complicated workflow forms.</p>
+
+<h2 id="who-can-use-formsg">Who can use FormSG?</h2>
+
+<p>FormSG is built for the public sector and public healthcare clusters. There is no onboarding process. Simply <a href="https://form.gov.sg/#!/signin">log in</a> with your agency email (e.g. @tech.gov.sg). FormSG works on both Internet and the WOG Intranet.</p>
+
+<h2 id="how-does-formsg-keep-my-data-secure">How does FormSG keep my data secure?</h2>
+
+<p>Unlike most form builders out there, FormSG does not store your data. This means if our database is breached, there is no raw data to hack. There are two secure modes of creating forms.</p>
+
+<p>Email mode: Form responses are sent directly into your specified email(s), and our server never stores a copy of it. Because we do not store responses, it is critical your mailbox is correctly specified and has space, or responses will be lost.</p>
+
+<p>Storage mode (Coming End Apr 2020): Responses are stored, but end-to-end encrypted. On form creation, private key is generated on the client and never seen by our server. On form submission, response is encrypted on the client first, before being sent to our server for storage.</p>
+
+<h2 id="my-form-responses-are-lost-can-you-help-us-recover-them">My form responses are lost! Can you help us recover them?</h2>
+
+<p>Because we do not store data, we cannot recover your lost data. If you cannot find your email responses, they might have been routed to an obscure Outlook folder set by your mail forwarding rules. Or they might have been quarantined by your agency firewall, which you can contact your AFM/IT department for. If you accidentally delete your email responses, they might still be on the email server, which you should contact your AFM/IT department for help.</p>
+
+<h2 id="is-formsg-im8--aias--dss-compliant">Is FormSG IM8 / AIAS / DSS compliant?</h2>
+
+<p>Yes we are compliant with IM8, AIAS policy, and DSS. If you have concerns on our compliance, kindly contact us via our <a href="https://go.gov.sg/formsg-support">Support Form</a>, and mention the specific clause you have concerns on.</p>
+
+<h2 id="is-formsg-really-free">Is FormSG really free?</h2>
+
+<p>Yes, officers can build any number of forms to collect any number of submissions for free.</p>
+
+<p>The only exception is having to pay for SingPass or CorpPass authentication. If your agency has a high volume of SPCP transactions each month, the price per login can be low. At the base tier, the price of SPCP is about $0.25 per login, with a fixed fee of about $2,000/month. We won’t be able to advise you on the latest pricing info, and you should contact SPCP rep <a href="mailto:alvin_wee@tech.gov.sg">alvin_wee@tech.gov.sg</a> for it.</p>
+
+<h2 id="how-do-you-enable-singpass-or-corppass">How do you enable SingPass or CorpPass?</h2>
+
+<p>All you have to do is enter an e-service ID on the Settings tab of your form to enable SPCP:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-singpass.png" alt="FormSG FAQ E-service ID" title="FormSG FAQ E-service ID" /></p>
+
+<p>An e-service ID is a unique billing ID given by the SingPass/CorpPass office to your department’s finance team. An invalid e-service ID will yield a 138 error for SingPass and 328 error for CorpPass. If you don’t already have an e-service ID, you can either ask your agency IT department to find an e-service ID to reuse, or contact SPCP rep <a href="mailto:alvin_wee@tech.gov.sg">alvin_wee@tech.gov.sg</a> to create a new one. When testing your e-service ID you may log in to our UAT server, https://uat.form.gov.sg and create test forms there. Note that accounts and forms are separate on UAT and Live servers and cannot be transferred over.</p>
+
+<p>To track number of submissions at your e-service ID you may visit the Billing Panel tab on the top right of your forms dashboard:</p>
+
+<p><img src="https://s3-ap-southeast-1.amazonaws.com/misc.form.gov.sg/faq-billing-eservice.png" alt="FormSG FAQ Billing Panel E-service ID" title="FormSG FAQ Billing Panel E-service ID" /></p>
+
+<p>It is up to you to decide if you want 2FA or 1FA e-service ID. For CorpPass, it is also up to you to decide whether you want authorisation work flows at your e-service ID. Consult SPCP rep on this if you have concerns.</p>
+
+<h2 id="is-formsg-really-up-247">Is FormSG really up 24/7?</h2>
+
+<p>Yes, we are up 24/7. There is no planned maintenance window. Typically once a few months we have a 2 hour maintenance window from 12am - 2am, but most features are constantly deployed without downtime. Because we do not charge for the service we do not have an SLA, but have a measured uptime of 99.999% since we launched. The exception is SingPass and CorpPass, which do have planned maintenance, with which you can contact SPCP rep <a href="mailto:alvin_wee@tech.gov.sg">alvin_wee@tech.gov.sg</a> to find out more.</p>
+
+<h2 id="how-am-i-informed-of-issues-on-my-form">How am I informed of issues on my form?</h2>
+
+<p>We have multiple tests and detection tools to flag issues on forms. If we detect an issue with your form we will email you. Although rare, if the entire platform has downtime, we will announce it on Workplace@Facebook, and enable a maintenance page on all forms. We have engineers on-call 24/7 to react to issues as fast as we can. If there are issues with your form, you can contact us through our <a href="https://go.gov.sg/formsg-support">Support Form</a>.</p>
+
+<h2 id="what-data-classification-rcst-can-formsg-handle">What data classification (RCST) can FormSG handle?</h2>
+
+<p>On Email mode, FormSG can handle up to Restricted per entry, and Confidential for the collection of data. This is because FormSG is a Restricted system that can manage Restricted data flowing through it, but ultimately data is stored in your government email, or SGMail, which is a Confidential system that lets you store Confidential collections of data. If however you specify a non-government email to send responses to, then you are not recommended to accept data that is classified Confidential.</p>
+
+<p>On Storage mode, FormSG can handle up to Restricted.</p>
+
+<h2 id="what-information-sensitivity-isf-can-formsg-handle">What information sensitivity (ISF) can FormSG handle?</h2>
+
+<p>FormSG’s email mode has in-principle approval from SNDGO, the policy owner, that it can support Sensitive High data.</p>
+
+<p>FormSG’s storage mode has similar approval for Sensitive Normal, and is still undergoing review for Sensitive High.</p>
+
+<h2 id="what-are-some-features-of-formsg">What are some features of FormSG?</h2>
+
+<p>There are many features of FormSG and the best way to learn about them is to <a href="https://form.gov.sg/#!/signin">log in</a> and explore the tool. Here’s a brief list of some of the features available:</p>
+<ul>
+  <li>Fields: Short text, Long text, Header, Statement, Email, Number, Dropdown, Radio, Checkbox, Yes/No, Date, Rating, NRIC, Decimal</li>
+  <li>Upload Image on the form</li>
+  <li>Attachments to upload photos and files</li>
+  <li>Table style questions</li>
+  <li>Automated acknowledgement email</li>
+  <li>Field validations</li>
+  <li>Control flow logic / Branching</li>
+  <li>Collaborate on a form together</li>
+  <li>Form feedback</li>
+  <li>Form templates/examples</li>
+  <li>SingPass login</li>
+  <li>MyInfo fields</li>
+  <li>CorpPass login</li>
+</ul>
+
+<h2 id="can-formsg-forms-have-many-questions">Can FormSG forms have many questions?</h2>
+
+<p>Our longest forms have more than 400 questions, and more than 100 deployed forms have 100 questions and more. To make forms easier to fill, form creators used Logic/Branching to shorten their forms and only show relevant questions.</p>
+
+<h2 id="can-formsg-manage-high-volume-of-responses">Can FormSG manage high volume of responses?</h2>
+
+<p>Some of our forms already have a high number of responses. In January 2020, more than a million submissions went through FormSG.</p>
+
+<h2 id="can-you-use-formsg-all-around-the-world">Can you use FormSG all around the world?</h2>
+
+<p>As long as you have an Internet/WOG Intranet connection you can use FormSG all around the world. Note that to log in to create forms you will also need access to your government email to retrieve the OTP.</p>
+
+<h2 id="are-there-slides-for-me-to-read-or-share-with-my-peers">Are there slides for me to read or share with my peers?</h2>
+
+<p>Yes there are! Feel free to view, comment on and share these slides that is viewable on the Internet: <a href="https://go.gov.sg/formsg-sharing-slides">https://go.gov.sg/formsg-sharing-slides</a>.</p>
+
+<h2 id="who-do-you-ask-for-help-or-keep-updated">Who do you ask for help or keep updated?</h2>
+
+<p>The fastest way to get help is to join our <a href="https://onepublicservice.facebook.com/groups/299464690543915/">Workplace@Facebook group</a> and post a question there. Our group name is [WOG] form.gov.sg. Fellow form creators and ourselves will readily respond within hours if not minutes.</p>
+
+<p>You may also consult experts in your agency, or “Agency Pros” for help via <a href="/AskAPro.html">this list</a>.</p>
+
+<p>For bug reports or technical issues happening to your live form, please fill in our <a href="https://go.gov.sg/formsg-support">Support Form</a>.</p>
+
+<h1 id="updates">Updates</h1>
+
+<p>We typically release features, improvements or fixes every Tuesday or Wednesday afternoon.</p>
+
+<h2 id="24-mar-2020-social-sharing-chinese-in-autoreply-pdfs-bug-fixes">24 Mar 2020: Social sharing, Chinese in autoreply PDFs, Bug fixes</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Social sharing through Facebook and Whatsapp now shows preview of form title, not just “Form Manager for Government”</li>
+  <li>Fixed bug where Chinese characters in auto-acknowledgement PDFs did not show up</li>
+  <li>Fixed permission related bugs for Storage mode in beta</li>
+  <li>Fixed MyInfo related bugs</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Removed old and unused endpoints</li>
+</ul>
+
+<h2 id="13-mar-2020-temperaturesg-2x-report">13 Mar 2020: TemperatureSG 2x report</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Launch 2x daily report for TemperatureSG to flag out non-submissions at 9am and 4pm</li>
+</ul>
+
+<h2 id="11-mar-2020-autofill">11 Mar 2020: Autofill</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Autofill for all fields, similar to Google forms’ logic</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>End to end testing for Storage mode</li>
+</ul>
+
+<h2 id="3-mar-2020-temperaturesg">3 Mar 2020: TemperatureSG</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>UI improvements for Storage mode</li>
+  <li>Updated error message when captcha forms are filled on Intranet, as captcha is not available there</li>
+</ul>
+
+<h2 id="28-feb-2020-temperaturesg">28 Feb 2020: TemperatureSG</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Launch Storage Mode and Webhooks for select users of temperature taking forms</li>
+</ul>
+
+<h2 id="12-feb-2020-intranet">12 Feb 2020: Intranet</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Enable Intranet</li>
+  <li>Migrated Intranet Data Collation Tool from form.app.gov.sg to collate.form.gov.sg</li>
+  <li>Fixed bug where attachment is selected when Enter is pressed on another field</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Refactored certain code into components to improve code re-usability</li>
+</ul>
+
+<h2 id="4-feb-2020-enable-captcha-worldwide-clean-up-code">4 Feb 2020: Enable captcha worldwide, clean up code</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Enable Captcha worldwide</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Refactored certain code into components to improve code re-usability</li>
+</ul>
+
+<h2 id="28-jan-2020-bug-fix">28 Jan 2020: Bug fix</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Fixed bug where table question could not be saved under a specific obscure workflow</li>
+</ul>
+
+<h2 id="9-jan-2020-finish-server-side-validation-minor-ui-fixes">9 Jan 2020: Finish server side validation, minor UI fixes</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Increased clickable area for admin navigation bar</li>
+  <li>Fixed bug where radio button is misaligned when option is empty</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Released all remaining server side validation, for security and prevention of data corruption</li>
+  <li>Refactored certain code into components to improve code re-usability</li>
+</ul>
+
+<h2 id="19-dec-2019-bug-fixes-operating-system-change">19 Dec 2019: Bug fixes, operating system change</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Fixed visual glitch where hidden fields on build tab were not updated correctly when condition fields were deleted on Logic</li>
+  <li>Fixed bug where billing panel did not display for Dec 2019</li>
+  <li>Fixed bug where decimal validator did not validate min and max when value is 0</li>
+  <li>Clearer error message when form content changes and form filler has to refresh to re-submit</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Changed our application’s base operating system to alpine which is lightweight and with much fewer potential vulnerabilities</li>
+  <li>Shifted underlying framework that powers autoreply pdf from the outdated PhantomJS to a more modern Puppeter that is backed by Google</li>
+  <li>Released more server side validation, for security and prevention of data corruption</li>
+</ul>
+
+<h2 id="10-dec-2019-database-cleanup-tightened-protocols">10 Dec 2019: Database cleanup, tightened protocols</h2>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Removed unused keys in database</li>
+  <li>Tightened downtime protocols if we ever need them</li>
+  <li>Released more server side validation, for security and prevention of data corruption</li>
+</ul>
+
+<h2 id="3-dec-2019-code-cleanup-security-improvements">3 Dec 2019: Code cleanup, security improvements</h2>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Released more server side validation, for security and prevention of data corruption</li>
+  <li>Implemented backend unit tests for server side validation</li>
+  <li>Enforced same site cookie policy for SPCP and Admin logins</li>
+  <li>Used built-in router for routes instead of directly assigning links to the window</li>
+  <li>Cleaned up code for welcome tab and thank you page</li>
+</ul>
+
+<h2 id="26-nov-2019-bug-fixes-security-improvements">26 Nov 2019: Bug fixes, security improvements</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Disallowed large forms from being created, e.g. forms with 2 million dropdown options</li>
+  <li>Added banner to remind users only yesno, radio, number, dropdown, rating and decimal can trigger Logic</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Released more server side validation, for security and prevention of data corruption</li>
+  <li>Implemented backend unit tests for server side validation</li>
+  <li>Disallowed duplicate emails where responses went to</li>
+</ul>
+
+<h2 id="19-nov-2019-upload-form-logo-security-improvements">19 Nov 2019: Upload form logo, security improvements</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Upload form logo feature released, you are encouraged to re-upload old custom logos with us</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Released more server side validation, for security and prevention of data corruption</li>
+  <li>Implemented backend unit tests for server side validation</li>
+  <li>Removed need for network call to get error messages</li>
+  <li>Improved logging to log IPs in error messages</li>
+  <li>Tested caching policy to make sure it works</li>
+</ul>
+
+<h2 id="12-nov-2019-security-improvements">12 Nov 2019: Security improvements</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Fix bottom padding of SingPass Login forms</li>
+  <li>Fix MyInfo hash bug that happens when user takes a long time to fill in MyInfo enabled forms</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Released server side validation for certain form fields, for security and prevention of data corruption</li>
+</ul>
+
+<h2 id="5-nov-2019-remove-form-start-button-onboarding-page-bug-fixes-and-security-improvements">5 Nov 2019: Remove form start button, onboarding page, bug fixes and security improvements</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Remove Start button and Read Instructions at the top of forms</li>
+  <li>Remove onboarding page for new users to whitelist @form.gov.sg emails</li>
+  <li>Fixed blank page when form.gov.sg/(symbol) is visited</li>
+  <li>Fixed empty eservice ID on Billing panel causing loader to hang</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Improved security of rating field to not pull from external sources</li>
+  <li>Improved code quality from Deepscan reports</li>
+</ul>
+
+<h2 id="31-oct-2019-penetration-testing-server-side-field-validation">31 Oct 2019: Penetration testing, server side field validation</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Clearer error message when you fail to submit form</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Penetration testing</li>
+  <li>Form fields and logic validated server side to patch data corruption</li>
+  <li>Escaped html in Logic tab</li>
+  <li>Refactored and cleaned up code for form validation</li>
+</ul>
+
+<h2 id="22-oct-2019-error-catching-and-content-security-policies">22 Oct 2019: Error catching and content security policies</h2>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Catch errors for JSON.parse that can potentially cause server to crash (although we have auto-recovery)</li>
+  <li>Fine tune content security policies</li>
+  <li>Commence penetration testing</li>
+</ul>
+
+<h2 id="15-oct-2019-image-field-response-includes-section-headers-bug-fixes-and-cleanups">15 Oct 2019: Image field, response includes section headers, bug fixes and cleanups</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Image field: You may now upload images to your form, which will be autocompressed to 1024 width and preserving aspect ratio</li>
+  <li>Email responses now include section headers to be clearer</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Fixed browser caching: no need to clear browser cache with future releases</li>
+  <li>Fixed email autoreply bug introduced since last Friday, where all email fields sent out autoreply</li>
+  <li>Enforce content security policies</li>
+  <li>Refactored code for user client service for improved readability</li>
+  <li>Added more unit tests for submissions endpoint</li>
+  <li>Improved internal documentation for onboarding and release process for engineers</li>
+</ul>
+
+<h2 id="8-oct-2019-allow-special-characters-in-form-name-table-question-need-not-have-max-rows-code-clean-up">8 Oct 2019: Allow special characters in form name, table question need not have max rows, code clean up</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Form name can now accept special characters such as parantheses and slashes</li>
+  <li>Table style question no longer mandates number of max rows</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Cleaned up unused code, such as analytics APIs, AngularJS services and functions</li>
+  <li>Refactored form fields into separate files</li>
+  <li>Made clearer different errors during login flow</li>
+  <li>Prevented HTML injection in email autoreply body</li>
+  <li>Fixed bug where non-signed in user does not get redirected to /signin when they visit /forms</li>
+</ul>
+
+<h2 id="1-oct-2019-speed-up-beta-storage-mode-speed-up-examples-security-improvements">1 Oct 2019: Speed up beta Storage mode, speed up Examples, security improvements</h2>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>For beta Storage mode, optimise speed of decryption for many responses by 330%</li>
+  <li>Speed up Examples loading time further by using indexes</li>
+  <li>Configure Content Security Policy for AngularJS and Font Awesome</li>
+</ul>
+
+<h2 id="24-sep-2019-restore-examples-tab">24 Sep 2019: Restore Examples tab</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Restore Examples tab with significantly faster loading speed</li>
+  <li>Remove pencils from Settings to make editing settings clearer</li>
+  <li>Display feedback count instead of response count on Feedback tab</li>
+</ul>
+
+<h2 id="18-sep-2019-checkbox-validation-feature">18 Sep 2019: Checkbox validation feature</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>You can now validate number of options users must choose on Checkbox</li>
+  <li>Add report vulnerability link to footer of form.gov.sg as per SNDGO circular</li>
+  <li>Fixed bug where MyInfo phone field did not show error text when not filled</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Update our nginx proxy to resolve domain dynamically</li>
+  <li>Batch job that update number of “live” forms, once this is fully ready we will reactivate Examples</li>
+</ul>
+
+<h2 id="10-sep-2019-bug-fixes-and-automated-tests-for-submissions-flow">10 Sep 2019: Bug fixes and automated tests for submissions flow</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Fixed bug where visiting deleted forms still displayed custom form inactive message</li>
+  <li>Fixed bug where attachments hidden by logic, when revealed but re-hidden are still submitted</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Automated end to end tests for submissions</li>
+</ul>
+
+<h2 id="3-sep-2019-new-user-guide-multiple-bug-fixes">3 Sep 2019: New user guide, multiple bug fixes</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Revamped FAQ into user guide</li>
+  <li>Fixed bug where radio button error did not show up when field is empty</li>
+  <li>Fixed bug where checking one checkbox option on preview page, selects multiple options at once</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Clean up pop-up code</li>
+</ul>
+
+<h2 id="27-aug-2019-beta-image-field-temporarily-take-down-examples">27 Aug 2019: Beta Image field, temporarily take down Examples</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Image field which allows images to be embedded on forms released for closed beta testing</li>
+  <li>Character limit of 480 (3 SMS messages) introduced for closed beta Phone field</li>
+  <li>Update messages for Decimal field to be in line with existing design</li>
+  <li>Show response count in Responses tab</li>
+  <li>Temporarily take down Examples for improvements</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Enable social sharing tags to be modified by us without deploying new code</li>
+</ul>
+
+<h2 id="20-aug-2019-new-decimal-field-fixes-to-edge-cases-of-attachments-errors">20 Aug 2019: New Decimal field, fixes to edge cases of attachments errors</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Decimal field with value based validation, e.g. GPA can be validated to be between 0.0 and 4.0</li>
+  <li>Uploading .zip attachments with invalid file extensions now shows an error</li>
+  <li>Uploading corrupt image files now shows a useful error</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Load test closed beta Phone field, and improve design</li>
+  <li>Improved our continuous deployment process</li>
+</ul>
+
+<h2 id="13-aug-2019-new-pop-up-design-for-adding-collaborators-improved-efficiency-of-form-creation-code">13 Aug 2019: New pop-up design for adding collaborators, improved efficiency of form creation code</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>New pop-up design for adding collaborators</li>
+  <li>Login OTP expiry reduced to 15 minutes, but logged in session still remains 1 day</li>
+  <li>Closed beta Phone field’s autoreply SMS falls back to phone number if alphanumeric ID fails</li>
+  <li>File extension check on attachments should be case-insensitive</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Improved efficiency of code that creates new fields on forms</li>
+</ul>
+
+<h2 id="6-aug-2019-beta-phone-field-download-form-feedback">6 Aug 2019: Beta phone field, download form feedback</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Closed beta phone field with country validation, and sends acknowledgement SMS</li>
+  <li>Download form feedback button</li>
+  <li>Clearer error messages for failed OTP resends</li>
+  <li>Fixed bug where Logic tab sometimes does not reflect Build tab field title changes</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Only send used form data to the client, to speed up forms and decrease risk of unintended metadata exposure</li>
+  <li>Increased automation in our deployment pipeline by auto-purging caches</li>
+</ul>
+
+<h2 id="30-jul-2019-remain-logged-in-to-singpass">30 Jul 2019: Remain logged in to SingPass</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Form submitters can now choose to remain logged in to SingPass indefinitely, which does not apply to forms with MyInfo fields</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Add end-to-end tests for login screen</li>
+  <li>Improve continuous deployment process</li>
+</ul>
+
+<h2 id="23-jul-2019-bug-fixes-and-security-improvements">23 Jul 2019: Bug fixes and security improvements</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Fixed bug where email fields without includeFormSummary flag were sending out form summaries</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Fix security finding relating to regex for government email login</li>
+  <li>Update versions of software dependencies</li>
+</ul>
+
+<h2 id="19-jul-2019-custom-form-inactive-message-gcc-preperations-for-formsg-intranet">19 Jul 2019: Custom form inactive message, GCC preperations for FormSG Intranet</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Form editors can now customise message to display when their forms are inactive</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Download imports from online links (from Content Delivery Networks) and host them locally</li>
+  <li>Kick start GCC onboarding to bring FormSG onto the Intranet</li>
+</ul>
+
+<h2 id="15-jul-2019-use-form-as-template-through-a-link">15 Jul 2019: Use form as template through a link</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>Add use template option to the Share tab</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Add end-to-end tests framework</li>
+  <li>Fix indentation inconsistencies in form’s Welcome tab</li>
+</ul>
+
+<h2 id="8-jul-2019-singpass-e-service-id-validation-database-and-cert-upgrades">8 Jul 2019: SingPass e-service ID validation, database and cert upgrades</h2>
+
+<p>What you can see, feel or smell:</p>
+<ul>
+  <li>SingPass e-service id is validated for your convenience on Settings panel</li>
+</ul>
+
+<p>What goes on behind the scenes:</p>
+<ul>
+  <li>Upgrade MongoDB database to version 3.6</li>
+  <li>Nudge CSG team to improve messaging on rejected email messages to let users know they can recover emails within 1 month if they write in to spear@tech.gov.sg</li>
+  <li>Viewer role for closed beta Storage mode of form responses</li>
+  <li>CorpPass and MyInfo cert changes</li>
+</ul>
+
+<h1 id="formsg---user-guide">FormSG - User Guide</h1>
+
+<p>FormSG is self-service and typically does not need a guide. The best way to learn about the service is to <a href="https://form.gov.sg/#!/signin">log in</a> and create your first form.</p>
+
+<p>We also have a constantly updated deck of slides for you to share with your peers: <a href="https://go.gov.sg/formsg-sharing-slides">https://go.gov.sg/formsg-sharing-slides</a></p>
+
+<p>There are three sections in this guide:</p>
+<ul>
+  <li>First, keep up to date with FormSG developments by viewing our Updates section.</li>
+  <li>Second, if you are a new user, access “READ THIS FIRST” on the menu.</li>
+  <li>Third, if you are looking for tips and tricks or workarounds to common issues, check out our Advanced Guide. If you have tips of your own to share, we’re all ears. You may visit our Github repository and update our guide directly. Instructions of how to are in the Advanced Guide.</li>
+</ul>
+
+
+    </div>
+  </body>
+
+</html>
