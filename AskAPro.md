@@ -27,9 +27,6 @@ lau_guanyi@customs.gov.sg
 **Elections Department**  
 gerry_gewi@eld.gov.sg  
 
-**Enterprise.sg**  
-clement_chua@enterprisesg.gov.sg  
-
 **HPB**  
 eugene_aw@hpb.gov.sg  
 justin_chua@hpb.gov.sg  
